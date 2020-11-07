@@ -22,4 +22,15 @@ class Profile extends MX_Controller
         $this->load->view('profile', $data);
         $this->load->view('layout/footer');
     }
+
+    public function update()
+    {
+        $data = $this->input->post();
+        $id = $data['id'];
+        $res = $this->profile->update($data, $id);
+
+        if ($res) {
+            echo json_encode(['error' => FALSE, 'message' => 'User information updated successfully']);
+        }
+    }
 }
