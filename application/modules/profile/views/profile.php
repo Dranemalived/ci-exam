@@ -4,7 +4,6 @@
 
 
         <div class="col-md-5">
-            <img src="" alt="" height="200" width="200">
             <input type="hidden" name="" id="user_id" value="<?= $profile->id ?>">
             <div class="form-group mt-5">
                 <label for="">Full Name</label>
